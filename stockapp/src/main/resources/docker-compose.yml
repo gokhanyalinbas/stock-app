@@ -1,0 +1,14 @@
+version: "3"
+services:
+  stockmongodb:
+    image: mongo:latest
+    container_name: "stockmongodb"
+    ports:
+      - 27017:27017
+  stockapp-mongodb:
+    image: stockapp-mongodb:1.0
+    container_name: stockapp-mongodb
+    ports:
+      - 8080:8080
+    links:
+      - stockmongodb
