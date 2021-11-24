@@ -58,7 +58,7 @@ public class StockController {
 
     @PatchMapping("/stocks/{id}")
     @ApiOperation("Updates the price of a single stock")
-    public ResponseEntity<StockResponseDto> updateStock(@PathVariable int id, @RequestBody StockRequestDto stockRequestDto) {
+    public ResponseEntity<StockResponseDto> updateStock(@PathVariable int id,@Valid @RequestBody StockRequestDto stockRequestDto) {
 
         StockEntity stockEntity = stockService.findById(id).orElseThrow(() -> new StockNotFoundException("Stock not found."));
         stockEntity.setCurrentPrice(stockRequestDto.getCurrentPrice());
