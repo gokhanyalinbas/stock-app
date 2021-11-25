@@ -23,7 +23,7 @@ public class StockRequestDto implements Serializable {
     @NotNull(message = "Stock name can not be null value.")
     @NotBlank(message = "Stock name is mandatory.")
     private String name;
-    @DecimalMin(value = "0.0", message = "Stock price must be higher than 0.0")
+    @DecimalMin(value = "0.0", message = "Stock price must be higher than 0")
     private double currentPrice;
     private Date lastUpdate;
 
