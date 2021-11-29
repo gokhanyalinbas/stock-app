@@ -10,7 +10,7 @@
 - [x] run spring boot docker image and link that container to mongo container 
    **`docker run -p 8080:8080 --name stockapp-mongodb --link stockmongodb:mongo -d stockapp-mongodb:1.0`**
 - [x] check docker running containers  **`docker ps`** it should display two container ids
-- [x] check logs of spring boot image **`docker logs springboot-mongodb`**
+- [x] check logs of spring boot image **`docker logs stockapp-mongodb`**
 
 - [x] login to mongo terminal to verify records **`docker exec -it stockmongodb bash`**
 - type mongo and enter
